@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Radii & Shadow</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#F5F5F5;padding:22px;font-family:var(--font-body);color:#231F20}
+  .row{display:flex;gap:18px;align-items:center}
+  .tile{width:96px;height:96px;background:#E0E0E0;display:flex;align-items:center;justify-content:center;font-size:11px;font-family:ui-monospace,monospace;color:#747474}
+  .shadow{background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.10),0 0 3px rgba(0,0,0,.30)}
+  .lab{font-size:11px;color:#747474;text-align:center;margin-top:6px;font-family:ui-monospace,monospace}
+  .cell{display:flex;flex-direction:column;align-items:center}
+</style></head><body>
+  <div class="row">
+    <div class="cell"><div class="tile" style="border-radius:0"></div><div class="lab">radius 0</div></div>
+    <div class="cell"><div class="tile" style="border-radius:10px"></div><div class="lab">radius‑card 10</div></div>
+    <div class="cell"><div class="tile" style="border-radius:999px;width:160px"></div><div class="lab">radius‑pill</div></div>
+    <div class="cell"><div class="tile shadow" style="border-radius:10px"></div><div class="lab">shadow‑slide</div></div>
+  </div>
+</body></html>

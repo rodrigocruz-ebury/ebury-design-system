@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Chart swatch</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;background:#F5F5F5;padding:22px;font-family:var(--font-body);color:#231F20}
+  .wrap{background:#E0E0E0;border-radius:10px;padding:20px;display:grid;grid-template-columns:1fr 140px;gap:24px;align-items:end}
+  .bars{display:flex;gap:10px;align-items:flex-end;height:140px}
+  .pair{display:flex;gap:4px;align-items:flex-end}
+  .pair b{width:14px;background:#74B0CA;border-radius:2px 2px 0 0}
+  .pair i{width:14px;background:#234862;border-radius:2px 2px 0 0}
+  .legend{font-size:12px;display:flex;flex-direction:column;gap:8px}
+  .legend span{display:inline-flex;align-items:center;gap:8px}
+  .legend i{width:14px;height:10px;display:inline-block}
+</style></head><body>
+<div class="wrap">
+  <div class="bars">
+    <div class="pair"><b style="height:120px"></b><i style="height:95px"></i></div>
+    <div class="pair"><b style="height:70px"></b><i style="height:62px"></i></div>
+    <div class="pair"><b style="height:55px"></b><i style="height:48px"></i></div>
+    <div class="pair"><b style="height:42px"></b><i style="height:35px"></i></div>
+    <div class="pair"><b style="height:30px"></b><i style="height:24px"></i></div>
+  </div>
+  <div class="legend">
+    <span><i style="background:#74B0CA"></i>Period 1</span>
+    <span><i style="background:#234862"></i>Period 2</span>
+  </div>
+</div>
+</body></html>

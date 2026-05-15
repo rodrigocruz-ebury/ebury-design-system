@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Bullets + Chart</title>
+<link rel="stylesheet" href="slide.css">
+</head><body>
+<div class="scaler" id="s">
+<div class="slide bg-cream">
+  <h2 class="title-tl" style="max-width:444px">Insert<br>title here</h2>
+
+  <!-- bullets -->
+  <div style="position:absolute;left:96px;top:516px;width:444px;display:flex;flex-direction:column;gap:48px">
+    <div>
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="font-size:40px;line-height:1;color:#231F20">→</div>
+        <div>
+          <div style="font-weight:500;font-size:28px;line-height:1.15">Bullet Title</div>
+          <div style="margin-top:10px;font-weight:400;font-size:20px;line-height:1.35;color:#333">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt finibus erat, nec laoreet ante. Aliquam venenatis diam quis nisi vehicula.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="font-size:40px;line-height:1;color:#231F20">→</div>
+        <div>
+          <div style="font-weight:500;font-size:28px;line-height:1.15">Bullet Title</div>
+          <div style="margin-top:10px;font-weight:400;font-size:20px;line-height:1.35;color:#333">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt finibus erat, nec laoreet ante.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="font-size:40px;line-height:1;color:#231F20">→</div>
+        <div>
+          <div style="font-weight:500;font-size:28px;line-height:1.15">Bullet Title</div>
+          <div style="margin-top:10px;font-weight:400;font-size:20px;line-height:1.35;color:#333">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt finibus erat.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- chart frame -->
+  <div style="position:absolute;left:714px;top:96px;width:1110px;height:888px;background:#E0E0E0;border-radius:10px;padding:96px 72px;box-sizing:border-box">
+    <div style="font-weight:600;font-size:20px;margin-bottom:16px">Chart Title</div>
+    <div style="position:relative;height:560px">
+      <!-- gridlines -->
+      <div style="position:absolute;inset:0 0 40px 70px;border-left:1px solid #231F20;border-bottom:1px solid #231F20"></div>
+      <!-- bars -->
+      <div style="position:absolute;left:70px;right:0;bottom:40px;top:0;display:flex;flex-direction:column;gap:28px;padding:20px 0;justify-content:space-around">
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:22px;width:92%;background:#74B0CA;border-radius:2px"></div><div style="height:22px;width:84%;background:#234862;border-radius:2px"></div></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:22px;width:54%;background:#74B0CA;border-radius:2px"></div><div style="height:22px;width:46%;background:#234862;border-radius:2px"></div></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:22px;width:40%;background:#74B0CA;border-radius:2px"></div><div style="height:22px;width:44%;background:#234862;border-radius:2px"></div></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:22px;width:32%;background:#74B0CA;border-radius:2px"></div><div style="height:22px;width:26%;background:#234862;border-radius:2px"></div></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:22px;width:18%;background:#74B0CA;border-radius:2px"></div><div style="height:22px;width:20%;background:#234862;border-radius:2px"></div></div>
+      </div>
+      <!-- legend -->
+      <div style="position:absolute;right:0;top:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <span style="display:inline-flex;align-items:center;gap:8px"><i style="width:16px;height:10px;background:#74B0CA"></i>Period 1</span>
+        <span style="display:inline-flex;align-items:center;gap:8px"><i style="width:16px;height:10px;background:#234862"></i>Period 2</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">02</div>
+  <div class="footer-meta">ebury.com</div>
+</div>
+</div>
+<script>
+  const el=document.getElementById('s');
+  const fit=()=>{const s=Math.min(innerWidth/1920,innerHeight/1080);el.style.transform=`scale(${s})`};
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

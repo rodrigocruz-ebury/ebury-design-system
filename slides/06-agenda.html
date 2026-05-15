@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Agenda</title>
+<link rel="stylesheet" href="slide.css">
+</head><body>
+<div class="scaler" id="s">
+<div class="slide bg-cream">
+  <h2 class="title-tl">Agenda</h2>
+  <div style="position:absolute;left:96px;top:344px;right:96px;display:grid;grid-template-columns:1fr 1fr;column-gap:96px;row-gap:40px">
+    <!-- items -->
+    <div style="display:flex;gap:32px;align-items:baseline;border-top:1px solid rgba(116,116,116,.5);padding-top:24px">
+      <div style="font-family:var(--font-display);font-size:75px;line-height:.9;min-width:120px">01</div>
+      <div>
+        <div style="font-size:28px;font-weight:500">Who is Ebury</div>
+        <div style="font-size:20px;color:#555;margin-top:8px;max-width:540px">The short version: 20 years of building cross‑border finance for growing companies.</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:32px;align-items:baseline;border-top:1px solid rgba(116,116,116,.5);padding-top:24px">
+      <div style="font-family:var(--font-display);font-size:75px;line-height:.9;min-width:120px">02</div>
+      <div>
+        <div style="font-size:28px;font-weight:500">The platform</div>
+        <div style="font-size:20px;color:#555;margin-top:8px;max-width:540px">Payments, FX, lending and risk — one login, one ledger, many currencies.</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:32px;align-items:baseline;border-top:1px solid rgba(116,116,116,.5);padding-top:24px">
+      <div style="font-family:var(--font-display);font-size:75px;line-height:.9;min-width:120px">03</div>
+      <div>
+        <div style="font-size:28px;font-weight:500">Client stories</div>
+        <div style="font-size:20px;color:#555;margin-top:8px;max-width:540px">How mid‑market exporters cut settlement time and margin loss in half.</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:32px;align-items:baseline;border-top:1px solid rgba(116,116,116,.5);padding-top:24px">
+      <div style="font-family:var(--font-display);font-size:75px;line-height:.9;min-width:120px">04</div>
+      <div>
+        <div style="font-size:28px;font-weight:500">Next steps</div>
+        <div style="font-size:20px;color:#555;margin-top:8px;max-width:540px">Onboarding, pricing, and what the first 30 days look like.</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">03</div>
+  <div class="footer-meta">ebury.com</div>
+</div>
+</div>
+<script>
+  const el=document.getElementById('s');
+  const fit=()=>{const s=Math.min(innerWidth/1920,innerHeight/1080);el.style.transform=`scale(${s})`};
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

@@ -1,0 +1,214 @@
+/* Ebury Design System — Colors & Type
+ * Tokens distilled from the Brand Deck Figma file.
+ * Load Inter + Archivo (KMR Apparat substitute) from Google Fonts in your <head>,
+ * or drop licensed KMR Apparat woff2 into /fonts and this will prefer it automatically.
+ */
+
+/* ------------------------------------------------------------------ */
+/* Fonts                                                               */
+/* ------------------------------------------------------------------ */
+
+/* KMR Apparat — full weight family from the licensed .ttf set.
+ * 300 Light, 400 Book, 500 Regular, 600 Medium, 700 Bold, 800 Heavy, 900 Black.
+ */
+@font-face{font-family:"KMR Apparat";font-weight:300;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Light.ttf") format("truetype")}
+@font-face{font-family:"KMR Apparat";font-weight:400;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Book.ttf") format("truetype")}
+@font-face{font-family:"KMR Apparat";font-weight:500;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Regular.ttf") format("truetype")}
+@font-face{font-family:"KMR Apparat";font-weight:600;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Medium.ttf") format("truetype")}
+@font-face{font-family:"KMR Apparat";font-weight:700;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Bold.ttf") format("truetype")}
+@font-face{font-family:"KMR Apparat";font-weight:800;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Heavy.ttf") format("truetype")}
+@font-face{font-family:"KMR Apparat";font-weight:900;font-style:normal;font-display:swap;src:url("./fonts/KMR-Apparat-Black.ttf") format("truetype")}
+
+/* ------------------------------------------------------------------ */
+/* Raw tokens                                                          */
+/* ------------------------------------------------------------------ */
+
+:root {
+  /* Neutrals */
+  --ink:        #231F20;        /* charcoal — primary text, dark bg */
+  --ink-2:      #333031;        /* raised charcoal — dark stat tiles */
+  --gray-700:   #747474;        /* hairline borders, muted text */
+  --gray-500:   #818181;
+  --gray-300:   #B9B9B9;
+  --gray-200:   #CCCCCC;
+  --gray-150:   #E0E0E0;        /* card panel */
+  --gray-100:   #F5F5F5;        /* default slide bg */
+  --gray-50:    #F7F7F7;        /* alternate slide bg */
+  --white:      #FFFFFF;
+
+  /* Ebury blues */
+  --blue:       #74B0CA;        /* hero accent */
+  --blue-navy:  #234862;        /* secondary chart colour */
+  --blue-steel: #527383;
+  --blue-sage:  #6B9C9A;
+  --blue-200:   #90C0D5;
+  --blue-150:   #ACD0DF;
+  --blue-100:   #B4D4E2;
+  --blue-75:    #BAD7E5;
+  --blue-50:    #C7DFEA;
+  --blue-25:    #E3EFF4;
+
+  /* Mint accent */
+  --mint:       #9FF6F3;
+
+  /* Shadows / overlays */
+  --shadow-slide: 0 5px 20px rgba(0,0,0,0.10), 0 0 3px rgba(0,0,0,0.30);
+  --rule-hair:  rgba(116,116,116,0.5);
+  --tint-white-15: rgba(255,255,255,0.15);
+
+  /* Radii */
+  --radius-card: 10px;
+  --radius-pill: 999px;
+
+  /* Spacing (4px scale — slide‑native) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;   /* slide gutter */
+
+  /* Type families */
+  /* Display: KMR Apparat is the real brand face. Archivo kept as fallback. */
+  --font-display: "KMR Apparat", "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display-weight: 300;
+  --font-body:    "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Type scale (slide‑native px, 1920×1080) */
+  --fs-hero:     180px;
+  --fs-display:  120px;
+  --fs-h1:        75px;
+  --fs-h2:        70px;
+  --fs-h3:        46px;
+  --fs-h4:        32px;
+  --fs-body-lg:   28px;
+  --fs-body:      22px;
+  --fs-body-sm:   20px;
+  --fs-caption:   16px;
+  --fs-micro:     14px;
+
+  /* Semantic colors */
+  --fg-1:        var(--ink);
+  --fg-2:        var(--gray-500);
+  --fg-invert:   var(--white);
+  --bg-1:        var(--gray-100);
+  --bg-2:        var(--gray-50);
+  --bg-card:     var(--gray-150);
+  --bg-dark:     var(--ink);
+  --bg-dark-2:   var(--ink-2);
+  --bg-accent:   var(--blue);
+  --accent:      var(--blue);
+  --accent-dark: var(--blue-navy);
+  --divider:     var(--rule-hair);
+}
+
+/* ------------------------------------------------------------------ */
+/* Semantic element styles                                             */
+/* ------------------------------------------------------------------ */
+
+.ebury-h1, h1.ebury {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--fs-display);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+  margin: 0;
+}
+
+.ebury-h2, h2.ebury {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--fs-h1);
+  line-height: 0.95;
+  color: var(--fg-1);
+  margin: 0;
+}
+
+.ebury-h3, h3.ebury {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--fs-h3);
+  line-height: 1.0;
+  color: var(--fg-1);
+  margin: 0;
+}
+
+.ebury-subtitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-body-lg);
+  line-height: 1.2;
+  color: var(--fg-1);
+}
+
+.ebury-body {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  line-height: 1.2;
+  color: var(--fg-1);
+}
+
+.ebury-body-reg, p.ebury {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--fs-body-sm);
+  line-height: 1.4;
+  color: var(--fg-1);
+  margin: 0;
+}
+
+.ebury-caption {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--fs-caption);
+  line-height: 1.35;
+  color: var(--fg-2);
+}
+
+.ebury-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  color: var(--fg-1);
+  text-transform: none;
+}
+
+.ebury-hero-number {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--fs-hero);
+  line-height: 0.9;
+  color: var(--fg-1);
+}
+
+/* Chip / tag: dark pill with white type */
+.ebury-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 18px 22px;
+  background: var(--ink);
+  border: 1.8px solid var(--rule-hair);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  line-height: 1.2;
+}
+
+/* Card: flat light‑gray panel */
+.ebury-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: var(--space-8);
+}
+
+/* Ebury official wordmark — black by default, invert via filter for dark bg */
+.ebury-logo{display:inline-block;line-height:0}
+.ebury-logo img{display:block;width:100%;height:auto}
+.ebury-logo.on-dark img{filter:invert(1)}
+

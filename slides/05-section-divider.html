@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Section divider</title>
+<link rel="stylesheet" href="slide.css">
+</head><body>
+<div class="scaler" id="s">
+<div class="slide bg-blue">
+  <!-- Headline -->
+  <h1 style="position:absolute;left:96px;top:110px;margin:0;font-family:var(--font-display);font-weight:400;font-size:200px;line-height:.95;letter-spacing:-.01em;color:#231F20">
+    How we<br>move money
+  </h1>
+
+  <!-- Vertical divider, same x as title slide -->
+  <div class="vrule" style="left:1500px;top:96px;bottom:96px;background:rgba(35,31,32,.45);width:1.5px"></div>
+
+  <!-- Horizontal rule — left zone (stops 48px before the vertical, matching the gap on the right side) -->
+  <div style="position:absolute;left:96px;right:468px;top:740px;height:1.5px;background:rgba(35,31,32,.45)"></div>
+  <!-- Horizontal rule — right (wordmark) zone -->
+  <div style="position:absolute;left:1548px;right:96px;top:740px;height:1.5px;background:rgba(35,31,32,.45)"></div>
+
+  <!-- Caption -->
+  <div style="position:absolute;left:96px;top:800px;font-family:var(--font-body);font-weight:400;font-size:38px;line-height:1.2;color:#231F20;max-width:720px">
+    Section 02 — payments infrastructure<br>built for speed &amp; scale
+  </div>
+
+  <!-- Wordmark in right column -->
+  <img src="../assets/logo/ebury-logo.svg" alt="ebury"
+       style="position:absolute;left:1500px;right:0;top:800px;margin-left:auto;margin-right:auto;width:260px;display:block">
+</div>
+</div>
+<script>
+  const el=document.getElementById('s');
+  const fit=()=>{const s=Math.min(innerWidth/1920,innerHeight/1080);el.style.transform=`scale(${s})`};
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

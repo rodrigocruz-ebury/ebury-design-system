@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Logo</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;font-family:var(--font-body)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);height:160px}
+  .cell{display:flex;align-items:center;justify-content:center;padding:24px}
+  .cell img{width:160px;height:auto;display:block}
+  .light{background:#F5F5F5}
+  .dark{background:#231F20}
+  .blue{background:#74B0CA}
+  .invert img{filter:invert(1)}
+</style></head><body>
+  <div class="grid">
+    <div class="cell light"><img src="../assets/logo/ebury-logo.svg" alt="ebury"></div>
+    <div class="cell blue"><img src="../assets/logo/ebury-logo.svg" alt="ebury"></div>
+    <div class="cell dark invert"><img src="../assets/logo/ebury-logo.svg" alt="ebury"></div>
+  </div>
+</body></html>

@@ -1,0 +1,42 @@
+/* Ebury slide — 1920×1080 shared styles */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600&family=Inter:wght@400;500;600&display=swap");
+@import url("../colors_and_type.css");
+
+html,body{margin:0;background:#111;min-height:100vh;font-family:var(--font-body);color:var(--fg-1);overflow:hidden}
+
+/* Scaler: a 1920×1080 stage pinned to viewport center, scaled to fit.
+   Using negative margins (not transform translate) so transform:scale()
+   is applied from the true center of the stage — this prevents the
+   "only a corner renders" bug on narrow/short viewports. */
+.scaler{
+  position:fixed;left:50%;top:50%;
+  width:1920px;height:1080px;
+  margin-left:-960px;margin-top:-540px;
+  transform-origin:center center;
+}
+
+.slide{
+  width:1920px;height:1080px;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-slide);
+  flex-shrink:0;
+}
+.slide.bg-cream{background:var(--gray-100)}
+.slide.bg-blue{background:var(--blue)}
+.slide.bg-ink{background:var(--ink);color:var(--fg-invert)}
+.slide.bg-white{background:#fff}
+
+.stage{position:absolute;inset:0}
+.gutter{padding:96px}
+
+.title-tl{position:absolute;left:96px;top:96px;font-family:var(--font-display);font-weight:300;font-size:75px;line-height:.95;color:var(--fg-1);max-width:1248px;margin:0}
+.subtitle-tr{position:absolute;left:984px;top:96px;font-family:var(--font-body);font-weight:500;font-size:22px;line-height:1.2;color:var(--fg-1);max-width:840px}
+
+.wordmark{font-family:var(--font-display);font-weight:300;font-size:46px;letter-spacing:-.02em}
+.bottom-wordmark{position:absolute;right:96px;bottom:96px}
+.bottom-rule{position:absolute;left:96px;right:96px;bottom:180px;border-top:1px solid var(--divider)}
+.vrule{position:absolute;top:96px;bottom:96px;width:1px;background:var(--divider)}
+
+.page-num{position:absolute;left:96px;bottom:56px;font-family:var(--font-body);font-size:14px;color:var(--gray-700)}
+.footer-meta{position:absolute;right:96px;bottom:56px;font-family:var(--font-body);font-size:14px;color:var(--gray-700)}
+
+.scale-wrap{width:1920px;height:1080px}
